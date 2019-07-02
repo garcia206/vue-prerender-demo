@@ -29,8 +29,8 @@ export default {
       console.log(error)
     })
     .finally(() => {
+      // document.dispatchEvent(new Event("x-app-rendered"))
       this.loading = false;
-      document.dispatchEvent(new Event("x-app-rendered"))
     })
   }
 }
