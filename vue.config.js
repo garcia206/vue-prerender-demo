@@ -6,7 +6,7 @@ module.exports = {
         '/about'
       ],
       useRenderEvent: true,
-      headless: false,
+      headless: true,
       onlyProduction: true
     }
   }
