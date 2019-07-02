@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This page shows a random dog image.</h1>
+    <h1>This page shows a cute random dog image:</h1>
     <p class="loading" v-if="loading">Loading image...</p>
 
     <div>
