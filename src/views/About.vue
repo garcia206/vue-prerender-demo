@@ -30,6 +30,7 @@ export default {
     })
     .finally(() => {
       this.loading = false;
+      document.dispatchEvent(new Event("x-app-rendered"))
     })
   }
 }
