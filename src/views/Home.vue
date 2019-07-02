@@ -11,7 +11,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   metaInfo: {
-    title: "Dog Home Page",
+    title: "Home Page",
     htmlAttrs: {
       lang: "en"
     },

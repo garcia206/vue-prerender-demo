@@ -1,10 +1,11 @@
 <template>
-  <div class="about">
-    <h1>This page shows a cute random dog image:</h1>
-    <p class="loading" v-if="loading">Loading image...</p>
+  <div>
+    <h1>This page shows store data</h1>
+    <p class="loading" v-if="loading">Loading data...</p>
 
-    <div>
-      <img v-bind:src="dogResponse.message" />
+    <div v-if="!loading">
+      {{ storeResponse.data.attributes.address1 }}
+      {{ storeResponse.data.attributes.city }}
     </div>
   </div>
 </template>
@@ -13,36 +14,34 @@ import api from "../api";
 
 export default {
   metaInfo: {
-    title: "Dog Abouts",
+    title: "Store Page",
     htmlAttrs: {
       lang: "en"
     },
     meta: [
       {
         name: "description",
-        content: "Check these super cute dogs!"
+        content: "This is the Chicago Store Data!"
       }
     ]
   },
   data() {
     return {
-      dogResponse: {},
+      storeResponse: {},
       loading: true
     };
   },
   created() {
     api
-      .getDog()
+      .getStore()
       .then(response => {
-        console.log(response);
-        this.dogResponse = response;
+        this.storeResponse = response;
       })
       .catch(error => {
         console.log(error);
       })
       .finally(() => {
         this.loading = false;
-        // document.dispatchEvent(new Event("x-app-rendered"));
       });
   }
 };
