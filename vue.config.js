@@ -7,7 +7,7 @@ const productionPlugins = [
     staticDir: path.join(__dirname, 'dist'),
     routes: ['/', '/dog', '/store'],
     renderer: new JSDOMRenderer({
-      // Renders after 5000 milliseconds. (5 seconds.)
+      // Renders after custom event is triggered
       renderAfterDocumentEvent: 'custom-render-trigger'
     }),
     // renderer: new PrerenderSpaPlugin.PuppeteerRenderer({
