@@ -12,7 +12,7 @@ new Vue({
   render: h => h(App),
   mounted: () => {
     setTimeout(function(){
-      document.dispatchEvent(new Event("x-app-rendered"))
+      document.dispatchEvent(new Event("custom-render-trigger"))
     }, 5000)
   }
 }).$mount('#app')
