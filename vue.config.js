@@ -18,8 +18,6 @@ const productionPlugins = [
 
 module.exports = {
   configureWebpack: config => {
-    
-      config.plugins.push(...productionPlugins);
-    
+    config.plugins.push(...productionPlugins);
   }
 }
