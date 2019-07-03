@@ -13,6 +13,6 @@ new Vue({
   mounted: () => {
     setTimeout(function(){
       document.dispatchEvent(new Event("custom-render-trigger"))
-    }, 5000)
+    }, 60000)
   }
 }).$mount('#app')

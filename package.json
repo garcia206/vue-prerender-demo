@@ -16,6 +16,7 @@
     "vue-router": "^3.0.3"
   },
   "devDependencies": {
+    "@prerenderer/renderer-jsdom": "^0.2.0",
     "@vue/cli-plugin-babel": "^3.8.0",
     "@vue/cli-plugin-eslint": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
