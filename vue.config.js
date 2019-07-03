@@ -7,7 +7,7 @@ const productionPlugins = [
     staticDir: path.join(__dirname, 'dist'),
     routes: ['/', '/dog', '/store'],
     renderer: new PrerenderSpaPlugin.PuppeteerRenderer({
-      headless: false,
+      headless: true,
       renderAfterDocumentEvent: 'custom-render-trigger',
       timeout: 0,
       waitForNavigation: { timeout: 0 },
