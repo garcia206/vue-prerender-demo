@@ -13,14 +13,14 @@ import api from "../api";
 
 export default {
   metaInfo() {
-    return this.storeResponse
+    return !this.loading
       ? {
-          title: `lululemon ${this.storeResponse.data[0].friendly_from_name} Store in ${this.storeResponse.data[0].city}`,
+          title: `lululemon ${this.storeResponse.data[0].attributes.friendly_from_name} Store in ${this.storeResponse.data[0].attributes.city}`,
           meta: [
             {
               name: 'description',
               content: `Find the latest technical gear for yoga lovers, runners, and everyone in between at our lululemon ${
-                this.storeResponse.data[0].friendly_from_name
+                this.storeResponse.data[0].attributes.friendly_from_name
               } store. Hemming is always on us!`,
             },
           ],
