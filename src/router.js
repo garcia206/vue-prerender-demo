@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Store from './views/Store.vue'
+import Chicago from './views/Chicago.vue'
+import Seattle from './views/Seattle.vue'
 
 Vue.use(Router)
 
@@ -22,9 +23,14 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/Dog.vue')
     },
     {
-      path: '/store',
-      name: 'store',
-      component: Store
+      path: '/chicago',
+      name: 'chicago',
+      component: Chicago
+    },
+    {
+      path: '/seattle',
+      name: 'seattle',
+      component: Seattle
     },
   ]
 })
